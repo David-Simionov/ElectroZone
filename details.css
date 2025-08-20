@@ -1,0 +1,126 @@
+/* details.css - само за main делот */
+
+main.details-page {
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    gap: 40px;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.product-details img {
+    width: 400px;
+    max-width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.product-details .info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.product-details .info h1 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #222;
+}
+
+.product-details .info p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 12px 0;
+    color: #555;
+}
+
+.product-details .info strong {
+    color: #444;
+}
+
+.product-details .info button.add-to-cart {
+    margin-top: auto;
+    padding: 14px 22px;
+    background-color: #ff6b00;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.product-details .info button.add-to-cart:hover {
+    background-color: #ff8c33;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    main.details-page {
+        flex-direction: column;
+        padding: 20px;
+        margin: 20px auto;
+    }
+
+    .product-details img {
+        width: 100%;
+        height: auto;
+    }
+}
+.rating {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.star {
+    font-size: 24px;
+    color: gray;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    user-select: none;
+}
+
+.star.selected,
+.star.hover {
+    color: gold;
+}
+
+.rating-value {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+}
+
+.toast {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #222;
+    color: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 16px;
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    bottom: 30px;
+    font-size: 17px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s, transform 0.4s;
+}
+
+.toast.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}

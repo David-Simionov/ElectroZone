@@ -1,0 +1,218 @@
+header {
+    background-color: #121212;
+    color: #FFFFFF;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+.logo img {
+    width: 150px;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 30px;
+}
+
+#searchInput {
+    width: 100%;
+    max-width: 400px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+}
+
+.meni ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.meni li {
+    margin-left: 20px;
+    position: relative;
+}
+
+.meni a {
+    text-decoration: none;
+    color: #FF6B00;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.meni a:hover {
+    color: #ffffff;
+}
+
+.item4{
+    top: -2px;
+}
+
+footer {
+    background-color: #0f2027;
+    color: #ccc;
+    padding: 30px 20px;
+    text-align: center;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+footer p {
+    margin: 10px 0;
+}
+
+footer a {
+    color: #ff9900;
+    text-decoration: none;
+    margin: 0 12px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+footer a:first-child {
+    margin-left: 0;
+}
+
+footer a:last-child {
+    margin-right: 0;
+}
+#cookie-banner {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    padding: 15px 10px;
+    font-family: 'Segoe UI', sans-serif;
+    display: none;
+    z-index: 999;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#cookie-banner p {
+    margin: 0;
+    font-size: 14px;
+    display: inline-block;
+}
+
+#cookie-banner a {
+    color: #ff9900;
+    text-decoration: underline;
+    margin-left: 5px;
+}
+
+#cookie-banner button {
+    margin-left: 20px;
+    padding: 6px 14px;
+    background-color: #ff6b00;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+#cookie-banner button:hover {
+    background-color: #ffa347;
+}
+
+#add-to-wishlist {
+    background-color: transparent;
+    border: 2px solid #ff3366;
+    color: #ff3366;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    margin-top: 5px;
+}
+
+#add-to-wishlist:hover {
+    background-color: #ff3366;
+    color: white;
+}
+
+.wishlist-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.wishlist-item {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    padding: 15px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+}
+
+.wishlist-item:hover {
+    transform: translateY(-4px);
+}
+
+.wishlist-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.wishlist-item h3 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.remove-from-wishlist {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 6px 10px;
+    font-size: 13px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.remove-from-wishlist:hover {
+    background-color: #b02a37;
+}
+
+.wishlist-item img {
+    width: 150px;       /* фиксна ширина за сите слики */
+    height: 150px;      /* фиксна висина за сите слики */
+    object-fit: contain; /* сликата ќе се прилагоди во зададената големина без да се исечи */
+    margin-bottom: 10px;
+    background-color: #f9f9f9; /* опционално, за позадина */
+    border-radius: 4px; /* опционално, убавина */
+}
+
+
+
+
+

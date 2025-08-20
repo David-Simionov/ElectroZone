@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Wishlist</title>
+  <link rel="stylesheet" href="sheet.css">
+  <link rel="stylesheet" href="details.css">
+  <link rel="stylesheet" href="wishlistsheet.css">
+</head>
+<body>
+
+<div id="cart-message" style="
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 25px;
+    border-radius: 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    font-weight: bold;
+    z-index: 1000;
+">Product added to cart!</div>
+
+
+<header class="container">
+  <div class="logo">
+    <img src="images/GAFJ2645.PNG">
+  </div>
+  <div class="meni">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="item4"><a href="cart.html">🛒 Cart</a></li>
+      <li><a href="wishlist.html">Wishlist</a></li>
+    </ul>
+  </div>
+</header>
+
+<main class="wishlist-page">
+  <h1>My Wishlist</h1>
+  <div id="wishlist-container"></div>
+</main>
+
+<footer>
+  <p>
+    <a href="about.html">About Us</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+  <p>&copy; 2025 ElectroZone. All rights reserved.</p>
+</footer>
+
+<script src="products.js"></script>
+<script src="script.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const container = document.getElementById("wishlist-container");
+
+    // Читање wishlist од localStorage
+    let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
+
+    function renderWishlist() {
+      if (wishlist.length === 0) {
+        container.innerHTML = `
+        <div class="empty-wishlist">
+            <p>Your wishlist is empty 😔</p>
+            <a href="products.html">Browse Products</a>
+        </div>
+    `;
+        return;
+      }
+
+
+      container.innerHTML = wishlist.map(item => `
+            <div class="wishlist-item" style="border:1px solid #ddd; padding:10px; margin:10px; border-radius:8px;">
+                <img src="${item.image}" alt="${item.name}" style="width:120px; display:block; margin-bottom:10px;">
+                <h3>${item.name}</h3>
+                <p><strong>Brand:</strong> ${item.brand}</p>
+                <p><strong>Price:</strong> $${item.price}</p>
+                <button class="remove-btn" data-id="${item.id}">❌ Remove</button>
+            </div>
+        `).join("");
+
+      // Доделување на слушачи за remove копчињата
+      document.querySelectorAll(".remove-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const id = btn.dataset.id;
+          wishlist = wishlist.filter(item => String(item.id) !== String(id));
+          localStorage.setItem("wishlist", JSON.stringify(wishlist));
+          renderWishlist(); // обнови ја листата без refresh
+        });
+      });
+    }
+
+    renderWishlist();
+  });
+</script>
+
+
+</body>
+</html>

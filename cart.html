@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Cart</title>
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="sheet.css">
+  <link rel="stylesheet" href="cardshhet.css">
+  <script src="script.js"></script>
+  <script src="products.js"></script>
+  <script src="card.js"></script>
+
+</head>
+<body>
+
+<div id="checkout-message" style="
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #4CAF50;
+    color: white;
+    padding: 30px 40px;
+    border-radius: 8px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.5s ease;
+    z-index: 2000;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+">
+  Thank you for your purchase! ❤️
+</div>
+
+
+<header class="container">
+  <div class="logo">
+    <img src="images/GAFJ2645.PNG">
+  </div>
+  <div class="meni">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li class="item4"><a href="cart.html" id="cart-button">🛒 Cart</a></li>
+      <Li><a href="wishlist.html">Wishlist</a></Li>
+    </ul>
+  </div>
+</header>
+
+<main class="cart-page">
+  <h1>Your Shopping Cart</h1>
+  <div id="cart-items">
+
+  </div>
+  <p id="total-price">Total: $0.00</p>
+  <button id="checkout-btn">Checkout</button>
+</main>
+
+<footer>
+  <p>
+    <a href="about.html">About Us</a> |
+    <a href="terms.html">Terms of Service</a> |
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+  <p>&copy; 2025 ElectroZone. All rights reserved.</p>
+</footer>
+
+
+</body>
+</html>

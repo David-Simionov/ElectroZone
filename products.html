@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Products</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="sheet.css">
+    <script src="products.js"></script>
+    <link rel="stylesheet" href="productssheet.css">
+
+</head>
+<body>
+
+<header class="container">
+    <div class="logo">
+        <img src="images/GAFJ2645.PNG">
+    </div>
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search products...">
+    </div>
+    <div class="meni">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="item4"><a href="cart.html" id="cart-button">🛒 Cart</a></li>
+            <Li><a href="wishlist.html">Wishlist</a></Li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section class="product-filters">
+        <select id="category-filter">
+            <option value="all">All Categories</option>
+            <option value="laptops">Laptops</option>
+            <option value="phones">Phones</option>
+            <option value="headphones">Headphones</option>
+            <option value="watches">Smart Watches</option>
+            <option value="consoles">Consoles</option>
+
+        </select>
+
+        <select id="brand-filter">
+            <option value="all">All Brands</option>
+            <option value="apple">Apple</option>
+            <option value="samsung">Samsung</option>
+            <option value="lenovo">Lenovo</option>
+            <option value="sony">Sony</option>
+            <option value="huawei">Huawei</option>
+            <option value="asus">Asus</option>
+            <option value="sennheiser">Sennheiser</option>
+            <option value="google">Google</option>
+            <option value="fitbit">Fitbit</option>
+            <option value="razer">Razer</option>
+            <option value="nintendo">Nintendo</option>
+            <option value="microsoft">Microsoft</option>
+        </select>
+
+        <select id="sort-filter">
+            <option value="default">Sort by</option>
+            <option value="asc">Price: Low to High</option>
+            <option value="desc">Price: High to Low</option>
+        </select>
+
+
+        <input type="number" id="price-min" placeholder="Min $" min="0">
+        <input type="number" id="price-max" placeholder="Max $" min="0">
+        <button id="apply-filters">Apply</button>
+    </section>
+
+
+    <section class="products">
+        <!-- Product 1 -->
+        <a href="product-details.html?id=1" class="product-card" data-category="laptops" data-brand="apple" data-price="1999">
+            <img src="images/macbookpro_14_inch_white_05-removebg-preview.png" alt="MacBook Pro 14-inch 2021">
+            <h3>MacBook Pro 14” 2021</h3>
+            <p>Compact yet powerful 14-inch MacBook Pro with Apple M1 Pro chip.</p>
+            <span class="price">$1999.00</span>
+        </a>
+
+
+        <!-- Product 2 -->
+        <a href="product-details.html?id=2" class="product-card" data-category="phones" data-brand="samsung" data-price="1000">
+            <img src="images/Samsung-Galaxy-S24-Ultra-Titanium-Violet-Smartphone-transparent-PNG-image-jpg-removebg-preview.png" alt="Phone 1">
+            <h3>Samsung Galaxy S24 Ultra</h3>
+            <p>High-end smartphone with amazing camera and features.</p>
+            <span class="price">$1000.00</span>
+        </a>
+
+
+        <!-- Product 3 -->
+        <a href="product-details.html?id=3" class="product-card" data-category="headphones" data-brand="sony" data-price="299.00">
+            <img src="images/images-removebg-preview.png" alt="Headphones">
+            <h3>Sony WH-H900N</h3>
+            <p>Noise-cancelling wireless over-ear headphones for immersive sound.</p>
+            <span class="price">$299.00</span>
+        </a>
+
+        <!-- Product 4 -->
+        <a href="product-details.html?id=4" class="product-card" data-category="laptops" data-brand="asus" data-price="1199">
+            <img src="images/12-120073_laptop-asus-gaming-hd-png-download-removebg-preview.png" alt="Laptop 2">
+            <h3>Asus ROG STRIX SCAR</h3>
+            <p>Performance laptop optimized for productivity and gaming.</p>
+            <span class="price">$1199.00</span>
+        </a>
+        
+        <!-- Product 5 -->
+        <a href="product-details.html?id=5" class="product-card" data-category="phones" data-brand="apple" data-price="999">
+            <img src="images/iPhone-16-Pro-Max-Latest-Apple-Smartphone-jpg-removebg-preview.png" alt="Phone 2">
+            <h3>iPhone 16 Pro Max</h3>
+            <p>Premium flagship smartphone with AMOLED display and powerful A17 Bionic processor.</p>
+            <span class="price">$999.00</span>
+        </a>
+
+        <!-- Product 6 -->
+        <a href="product-details.html?id=6" class="product-card" data-category="watches" data-brand="huawei" data-price="79.99">
+            <img src="images/pngtree-smart-watch-png-image_14171827.png" alt="Smart Watch">
+            <h3>Huawei Smart Watch</h3>
+            <p>Smartwatch with fitness tracking, notifications, and long battery life.</p>
+            <span class="price">$79.99</span>
+        </a>
+
+        <!-- Product 7 -->
+        <a href="product-details.html?id=7" class="product-card" data-category="laptops" data-brand="apple" data-price="1099.99">
+            <img src="images/mockup_apple_macbook_pro_16_2021_4e42d424b1-removebg-preview.png" alt="MacBook Air M2">
+            <h3>MacBook Air M2</h3>
+            <p>Lightweight and powerful laptop with M2 chip.</p>
+            <span class="price">$1099.99</span>
+        </a>
+
+        <!-- Product 8 -->
+        <a href="product-details.html?id=8" class="product-card" data-category="laptops" data-brand="dell" data-price="999.99">
+            <img src="images/new-dell-xps-13-9300-laptop-724Vkn7-600-removebg-preview.png" alt="Dell XPS 13">
+            <h3>Dell XPS 13</h3>
+            <p>Compact and powerful ultrabook with InfinityEdge display.</p>
+            <span class="price">$999.99</span>
+        </a>
+
+        <!-- Product 9 -->
+        <a href="product-details.html?id=9" class="product-card" data-category="laptops" data-brand="lenovo" data-price="1299.99">
+            <img src="images/Lenovo_Legion_5_Pro_Gen_7_Front_Facing.png" alt="Lenovo Legion 5">
+            <h3>Lenovo Legion 5</h3>
+            <p>Gaming laptop with powerful GPU and cooling system.</p>
+            <span class="price">$1299.99</span>
+        </a>
+
+        <!-- Product 10 -->
+        <a href="product-details.html?id=10" class="product-card" data-category="phones" data-brand="apple" data-price="999.99">
+            <img src="images/apple-blue-iphone-15-hd-transparent-background-11694998848nku0fbbaho-removebg-preview.png" alt="iPhone 15">
+            <h3>iPhone 15</h3>
+            <p>Latest Apple iPhone with A17 chip and Dynamic Island.</p>
+            <span class="price">$999.99</span>
+        </a>
+
+        <!-- Product 11 -->
+        <a href="product-details.html?id=11" class="product-card" data-category="headphones" data-brand="sennheiser" data-price="499.99">
+            <img src="images/91dWDj25eYL._UF894_1000_QL80_-removebg-preview.png" alt="Sennheiser HD 660S">
+            <h3>Sennheiser HD 660S</h3>
+            <p>Audiophile-grade open-back headphones with exceptional clarity and comfort.</p>
+            <span class="price">$499.99</span>
+        </a>
+
+
+        <!-- Product 12 -->
+        <a href="product-details.html?id=12" class="product-card" data-category="phones" data-brand="google" data-price="799.99">
+            <img src="images/pngtree-google-pixel-8-pro-png-image_20345831.png" alt="Google Pixel 8">
+            <h3>Google Pixel 8</h3>
+            <p>Pure Android experience with Tensor G3 chip.</p>
+            <span class="price">$799.99</span>
+        </a>
+
+        <!-- Product 13 -->
+        <a href="product-details.html?id=13" class="product-card" data-category="headphones" data-brand="sony" data-price="349.99">
+            <img src="images/sony-wh-1000xm5-black-1-550x550.webp" alt="Sony WH-1000XM5">
+            <h3>Sony WH-1000XM5</h3>
+            <p>Premium noise cancelling over-ear headphones.</p>
+            <span class="price">$349.99</span>
+        </a>
+
+        <!-- Product 14 -->
+        <a href="product-details.html?id=14" class="product-card" data-category="headphones" data-brand="apple" data-price="249.99">
+            <img src="images/111851_sp880-airpods-Pro-2nd-gen.png" alt="AirPods Pro 2">
+            <h3>Apple AirPods Pro 2</h3>
+            <p>Wireless earbuds with adaptive transparency and ANC.</p>
+            <span class="price">$249.99</span>
+        </a>
+
+        <!-- Product 15 -->
+        <a href="product-details.html?id=15" class="product-card" data-category="headphones" data-brand="samsung" data-price="229.99">
+            <img src="images/samsung-buds-2-pro.webp" alt="Galaxy Buds 2 Pro">
+            <h3>Samsung Galaxy Buds 2 Pro</h3>
+            <p>Compact earbuds with intelligent ANC and 360 audio.</p>
+            <span class="price">$229.99</span>
+        </a>
+
+        <!-- Product 16 -->
+        <a href="product-details.html?id=16" class="product-card" data-category="watches" data-brand="fitbit" data-price="179.99">
+            <img src="images/Fitbit-Versa4.original_iCWfSdB-removebg-preview.png" alt="Fitbit Versa 4">
+            <h3>Fitbit Versa 4</h3>
+            <p>Fitness-focused smartwatch with sleep tracking.</p>
+            <span class="price">$179.99</span>
+        </a>
+
+        <!-- Product 17 -->
+        <a href="product-details.html?id=17" class="product-card" data-category="watches" data-brand="apple" data-price="429.99">
+            <img src="images/apple-watch-series-9-midnight-hd-transparent-png-116949941870prkq6f9wl-removebg-preview.png" alt="Apple Watch Series 9">
+            <h3>Apple Watch Series 9</h3>
+            <p>Advanced smartwatch with double tap gestures.</p>
+            <span class="price">$429.99</span>
+        </a>
+
+        <!-- Product 18 -->
+        <a href="product-details.html?id=18" class="product-card" data-category="watches" data-brand="garmin" data-price="399.99">
+            <img src="images/1.png" alt="Garmin Venu 3">
+            <h3>Garmin Venu 3</h3>
+            <p>Premium fitness watch with AMOLED screen and body battery.</p>
+            <span class="price">$399.99</span>
+        </a>
+
+        <!-- Product 19 -->
+        <a href="product-details.html?id=19" class="product-card" data-category="consoles" data-brand="sony" data-price="499.99">
+            <img src="images/playstation-5-sony-ps5-side-view-with-controller-701751695142204cgnpwtopeb-removebg-preview.png" alt="PlayStation 5">
+            <h3>PlayStation 5</h3>
+            <p>Next-gen gaming console with 4K support and fast SSD.</p>
+            <span class="price">$499.99</span>
+        </a>
+
+        <!-- Product 20 -->
+        <a href="product-details.html?id=20" class="product-card" data-category="consoles" data-brand="microsoft" data-price="499.99">
+            <img src="images/console-of-xbox-series-x-with-controller-7017516951424723dwa3ncuul-removebg-preview.png" alt="Xbox Series X">
+            <h3>Xbox Series X</h3>
+            <p>Powerful console for immersive 4K gaming.</p>
+            <span class="price">$499.99</span>
+        </a>
+
+        <!-- Product 21 -->
+        <a href="product-details.html?id=21" class="product-card" data-category="consoles" data-brand="nintendo" data-price="349.99">
+            <img src="images/G03-removebg-preview.png" alt="Nintendo Switch OLED" width="100px">
+            <h3>Nintendo Switch OLED</h3>
+            <p>Hybrid gaming console with OLED display and detachable Joy-Cons.</p>
+            <span class="price">$349.99</span>
+
+        </a>
+
+        <!-- Product 22 -->
+        <a href="product-details.html?id=22" class="product-card" data-category="laptops" data-brand="razer" data-price="2599.99">
+            <img src="images/9668-1-en-v2.png" alt="Razer Blade 16">
+            <h3>Razer Blade 16</h3>
+            <p>Powerful gaming laptop with Mini LED display.</p>
+            <span class="price">$2599.99</span>
+
+        </a>
+
+        <!-- Product 23 -->
+        <a href="product-details.html?id=23" class="product-card" data-category="phones" data-brand="asus" data-price="999.99">
+            <img src="images/4A2BCCC6-B9D8-47A5-AD7F-501E30A462A9.png" alt="Asus ROG Phone 7">
+            <h3>Asus ROG Phone 7</h3>
+            <p>Gaming phone with cooling system and high refresh rate.</p>
+            <span class="price">$999.99</span>
+        </a>
+
+        <!-- Product 24 -->
+        <a href="product-details.html?id=24" class="product-card" data-category="headphones" data-brand="beats" data-price="349.99">
+            <img src="images/426047-Product-0-I-638284387533026772_5376b857-a30c-426e-8d70-075927df2622_1024x1024-removebg-preview.png" alt="Beats Studio Pro">
+            <h3>Beats Studio Pro</h3>
+            <p>Studio-quality headphones with Spatial Audio.</p>
+            <span class="price">$349.99</span>
+        </a>
+
+        <!-- Product 25 -->
+        <a href="product-details.html?id=25" class="product-card" data-category="watches" data-brand="huawei" data-price="219.99">
+            <img src="images/fee_786_587_png.webp" alt="Huawei Watch GT 4">
+            <h3>Huawei Watch GT 4</h3>
+            <p>Elegant smartwatch with long battery and wellness tracking.</p>
+            <span class="price">$219.99</span>
+        </a>
+
+        <!-- Product 26 -->
+        <a href="product-details.html?id=26" class="product-card" data-category="consoles" data-brand="valve" data-price="399.99">
+            <img src="images/extremerate-austausch-gehause-durchsichtig-transparent-steam-deck-mod-gehause-483396-removebg-preview.png" alt="Steam Deck">
+            <h3>Steam Deck</h3>
+            <p>Portable gaming PC with access to full Steam library.</p>
+            <span class="price">$399.99</span>
+
+        </a>
+
+    </section>
+
+</main>
+
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn">&times;</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: <span id="total-price">$0.00</span></p>
+        <button id="checkout-btn">Checkout</button>
+    </div>
+</div>
+
+<footer>
+    <p>
+        <a href="about.html">About Us</a> |
+        <a href="terms.html">Terms of Service</a> |
+        <a href="privacy.html">Privacy Policy</a>
+    </p>
+    <p>&copy; 2025 ElectroZone. All rights reserved.</p>
+</footer>
+
+</body>
+</html>

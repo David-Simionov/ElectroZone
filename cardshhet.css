@@ -1,0 +1,123 @@
+.cart-page {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+#cart-items {
+    margin-bottom: 20px;
+}
+
+.cart-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item img {
+    width: 100px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.cart-item-title {
+    font-weight: 700;
+    margin-bottom: 6px;
+}
+
+.cart-item-price {
+    color: #ff6b00;
+    font-weight: bold;
+}
+
+#total-price {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: right;
+}
+
+#checkout-btn {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#checkout-btn:hover {
+    background-color: #ff9333;
+}
+
+.meni ul li:nth-child(4){
+    border-bottom: 1px solid #FF6B00;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.remove-btn:hover {
+    background: darkred;
+}
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.quantity-control button {
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 4px;
+    user-select: none;
+}
+
+.quantity {
+    min-width: 20px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.remove-btn {
+    background: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 10px;
+}
+.remove-btn:hover {
+    background: darkred;
+}

@@ -1,0 +1,27 @@
+.about-us {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px 30px;
+    background-color: #f7f7f7;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-us h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #FF6B00;
+}
+
+.about-us p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+footer a:nth-child(1){
+    border-bottom: 1px solid #ff9900;
+}

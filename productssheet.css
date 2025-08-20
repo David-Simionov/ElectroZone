@@ -1,0 +1,140 @@
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    display: block; /* за да се однесува како box */
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none; /* трга underline */
+    color: inherit; /* го задржува нормалниот текст */
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #222;
+}
+
+.product-card p {
+    color: #666;
+    font-size: 14px;
+}
+
+.price {
+    display: block;
+    font-weight: bold;
+    color: #ff6b00;
+    margin: 10px 0;
+}
+
+/* Filters & Sorting */
+.product-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px auto 10px auto;
+    max-width: 1200px;
+    padding: 0 40px;
+    justify-content: center;
+}
+
+.product-filters select,
+.product-filters input,
+.product-filters button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#apply-filters {
+    background-color: #ff6b00;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#apply-filters:hover {
+    background-color: #ff9333;
+}
+
+#sort-filter {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* Cart modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .products {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .product-filters {
+        padding: 0 20px;
+        justify-content: center;
+    }
+}
+
+/* Active menu highlight */
+.meni ul li:nth-child(2){
+    border-bottom: 1px solid #FF6B00;
+}
+
