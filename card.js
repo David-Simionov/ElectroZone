@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", () => {
             checkoutMessage.style.pointerEvents = "none";
 
             localStorage.removeItem("cart");
-            window.location.href = "home.html";
+            window.location.href = "index.html";
         }, 3000);
     });
 
