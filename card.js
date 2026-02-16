@@ -6,13 +6,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const checkoutBtn = document.getElementById("checkout-btn");
     const checkoutMessage = document.getElementById("checkout-message");
 
-    // Проверка дали страницата има кошничка елементи
     if (!cartItemsContainer || !totalPriceEl || !checkoutBtn || !checkoutMessage) return;
 
     let cart = JSON.parse(localStorage.getItem("cart")) || [];
-    const TAX_RATE = 0.05; // 5% данок
-
-    // Функција за пресметка на цена со попуст
+    const TAX_RATE = 0.05;
     function calculateDiscountedPrice(product) {
         if (!product.discount) return product.price;
         if (product.discount.type === "percent") {
@@ -80,8 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
             <strong>Total: $${total.toFixed(2)}</strong>
         `;
         checkoutBtn.disabled = false;
-
-        // Слушачи за бришење
         document.querySelectorAll(".remove-btn").forEach(button => {
             button.addEventListener("click", () => {
                 const idToRemove = parseInt(button.dataset.id);
@@ -90,8 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 renderCart();
             });
         });
-
-        // Слушачи за зголемување количина
         document.querySelectorAll(".increase-qty").forEach(button => {
             button.addEventListener("click", () => {
                 const id = parseInt(button.dataset.id);
@@ -103,8 +96,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-
-        // Слушачи за намалување количина
         document.querySelectorAll(".decrease-qty").forEach(button => {
             button.addEventListener("click", () => {
                 const id = parseInt(button.dataset.id);
@@ -121,11 +112,8 @@ document.addEventListener("DOMContentLoaded", () => {
     renderCart();
 
     checkoutBtn.addEventListener("click", () => {
-        // Прикажи пораката
         checkoutMessage.style.opacity = "1";
         checkoutMessage.style.pointerEvents = "auto";
-
-        // После 3 секунди избледи пораката и врати на home
         setTimeout(() => {
             checkoutMessage.style.opacity = "0";
             checkoutMessage.style.pointerEvents = "none";

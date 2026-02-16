@@ -34,8 +34,8 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="products.html">Products</a></li>
       <li><a href="contact.html">Contact</a></li>
-      <li class="item4"><a href="cart.html">🛒 Cart</a></li>
-      <li><a href="wishlist.html">Wishlist</a></li>
+      <Li><a href="wishlist.html">Wishlist</a></Li>
+      <li class="item4"><a href="cart.html" id="cart-button">🛒</a></li>
     </ul>
   </div>
 </header>
@@ -60,7 +60,6 @@
   document.addEventListener("DOMContentLoaded", () => {
     const container = document.getElementById("wishlist-container");
 
-    // Читање wishlist од localStorage
     let wishlist = JSON.parse(localStorage.getItem("wishlist") || "[]");
 
     function renderWishlist() {
@@ -84,8 +83,6 @@
                 <button class="remove-btn" data-id="${item.id}">❌ Remove</button>
             </div>
         `).join("");
-
-      // Доделување на слушачи за remove копчињата
       document.querySelectorAll(".remove-btn").forEach(btn => {
         btn.addEventListener("click", () => {
           const id = btn.dataset.id;
